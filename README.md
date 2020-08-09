@@ -35,8 +35,7 @@ These instructions will get you a copy of the project up and running on your loc
 ## Benefits of Businesses after Covid-19
 
 * Since businesses are shifting online it is essential to maintain security of confedential user information. There has been a rise in the number of health record breaches every yrear with number crossing 200 miliion in 2019.
-* Since businesses are shifting online it is essential to maintain security of confedential user information. There has been a rise in the number of health record breaches every yrear with number crossing 200 miliion in 2019.
-* due to the pandemic it is essential to maintain social distancing and goverment document verification becomes very difficult in such situations. Also the patients addimmted in the hosptals require a fast and secure mechanism using which they can claim there insurance without any physical verification and delay in the documentation formalities.
+* Due to the pandemic it is essential to maintain social distancing and goverment document verification becomes very difficult in such situations. Also the patients addimmted in the hosptals require a fast and secure mechanism using which they can claim there insurance without any physical verification and delay in the documentation formalities.
 * We have created a prototype application to automate storage,verification and sharing of electronic Health Record documents all with the security of Blockchain.
 We learn Machine learning algorithm .
 * We have also incorporated an OCR system for clear understanding of the reports to the docter
