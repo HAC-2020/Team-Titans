@@ -30,6 +30,16 @@ These instructions will get you a copy of the project up and running on your loc
 * Remix(IDE)
 * Metamask
 
+ <img src= "https://firebasestorage.googleapis.com/v0/b/chalo-a910a.appspot.com/o/other%2Farch.PNG?alt=media&token=92cf391d-bc70-4370-bb64-bd515bcbd330" alt="Aimeos logo" title="Medicyl" height="150" />
+
+## Business
+
+We learn how to design a full fledged application to autimate verification and authentication of documents.
+We learn Machine learning algorithm to detect forgery in documents and differentiate between real and forged documents.
+We also learnt how to complete the task by doing it limited amount of time.
+
+
+
 
 ## Deployment
 
