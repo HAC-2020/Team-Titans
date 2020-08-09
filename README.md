@@ -1,7 +1,9 @@
 # Team-Titans
 
 Blockchain backed solution for managing the patient’s medical record management system. The system focuses on efficiently and optimally securing the medical information of an individual. The individual should have access to their account and should decide with whom to share the digital information. The solution should propose the following 
-a. UI for efficient capturing of records. 
+
+a. UI for efficient capturing of records
+
 b. Model for securing the information 
 c. Appropriate system for verification of the information. 
 d. Legitimate access to the information.
@@ -60,7 +62,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Priyam Shah** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Priyam Shah** - (https://github.com/priyamshah112)
 
 See also the list of [contributors](https://github.com/HAC-2020/Team-Titans/contributors) who participated in this project.
 
