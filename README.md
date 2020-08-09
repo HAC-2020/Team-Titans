@@ -1,6 +1,6 @@
 # Team-Titans
 
-Blockchain backed solution for managing the patient’s medical record management system. The system focuses on efficiently and optimally securing the medical information of an individual. The individual should have access to their account and should decide with whom to share the digital information. The solution should propose the following 
+This is a Blockchain backed solution for managing the patient’s medical record management system. The system focuses on efficiently and optimally securing the medical information of an individual. The individual should have access to their account and should decide with whom to share the digital information. The solution should propose the following 
 
 * UI for efficient capturing of records
 * Secure portal for Medical document storage and Electronic Health Record maintenance
@@ -10,6 +10,10 @@ Blockchain backed solution for managing the patient’s medical record managemen
 * Ease of sharing for Medical documents with Doctors and Insurance Companies
 * By clicking few buttons one can purchase the policies, without undergoing cumbersome paperwork
 
+
+<a href="">
+    <img src="https://drive.google.com/file/d/1LOGEyOqSXp9eX99f-8e5YEh4rvSKCzlX/view" alt="Aimeos logo" title="Aimeos" align="right" height="60" />
+</a>
 
 ## Getting Started
 
