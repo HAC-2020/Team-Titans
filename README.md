@@ -3,10 +3,12 @@
 Blockchain backed solution for managing the patient’s medical record management system. The system focuses on efficiently and optimally securing the medical information of an individual. The individual should have access to their account and should decide with whom to share the digital information. The solution should propose the following 
 
 * UI for efficient capturing of records
-* Model for securing the information 
+* Secure portal for Medical document storage and Electronic Health Record maintenance
 * Appropriate system for verification of the information. 
 * Legitimate access to the information.
 * A network implementation of patients for ease of management 
+* Ease of sharing for Medical documents with Doctors and Insurance Companies
+* By clicking few buttons one can purchase the policies, without undergoing cumbersome paperwork
 
 
 ## Getting Started
