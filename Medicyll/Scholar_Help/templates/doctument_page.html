@@ -1,0 +1,271 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% include "html_head.html" %}
+
+    <link rel="stylesheet" href="{% static 'include/plugins/datatables-bs4/css/dataTables.bootstrap4.css' %}">
+    <style>
+        .modal-lg {
+            max-width: 80%;
+        }
+
+    </style>
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<!-- Site wrapper -->
+<div class="wrapper">
+
+
+    {% include "nav_header.html" %}
+    {% include "sidebar_user.html" %}
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 style="color:#3931af;">{{ servicedetails.name }}</h1>
+                    </div>
+
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- left column -->
+                    <div class="col-md-12">
+
+                       
+
+
+
+                            <!-- /.card-header -->
+                            <!-- form start -->
+
+                            <div class="card-body">
+
+
+                                <div class="card">
+                                    {% comment %} <div class="card-header">
+                                        <h5 class="m-0">{{ scheme.name }}</h5>
+                                    </div> {% endcomment %}
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label style="color:#3931af;">About Doctor</label>
+
+                                                   <p>{{ servicedetails.description }}</p>
+                                                     
+                                                </div>
+                                            </div>
+                                            <div class="col-5">
+                                                <div class="form-group">
+                                                    <label style="color:#3931af;">Specialists</label>
+                                                    <p>{{ servicedetails.other|linenumbers|linebreaks }}</p>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-4">
+                                                <label for="inputState" style="color:#3931af;">Access Time</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose...</option>
+                                                    <option>1 week</option>
+                                                     <option>2 weeks</option>
+                                                      <option>3 weeks</option>
+                                                       <option>1 month</option>
+                                                        <option>Lifetime</option>
+                                                </select>
+                                                </div>
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <a href="/userapply"> <button id="btndis" class="btn btn-light" style="color:#3931af;">Share </button></a>
+                                                    <button id="eyeIcon" class="btn btn-light" style="color:#3931af;" onclick="disableButton()"><i class="far fa-eye"></i></button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+
+
+                       
+                        <!-- /.card -->
+                    </div>
+                    <!--/.col (left) -->
+                    <!-- right column -->
+                    <!--/.col (right) -->
+                </div>
+
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+</div>
+
+{% include "javascript.html" %}
+<script src=" {% static 'include/plugins/jquery-validation/jquery.validate.min.js' %}"></script>
+<script src="{% static 'include/plugins/jquery-validation/additional-methods.min.js' %}"></script>
+
+<!-- DataTables -->
+<script src="{% static 'include/plugins/datatables/jquery.dataTables.js' %} "></script>
+<script src="{% static 'include/plugins/datatables-bs4/js/dataTables.bootstrap4.js' %}"></script>
+
+<script src="{% static 'include/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-storage.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-storage.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyDoWq203bF2ryiODCG7OQ4cizoiU6e1iLA",
+        authDomain: "rgit-hack.firebaseapp.com",
+        databaseURL: "https://rgit-hack.firebaseio.com",
+        projectId: "rgit-hack",
+        storageBucket: "rgit-hack.appspot.com",
+        messagingSenderId: "602679207194",
+        appId: "1:602679207194:web:69f0008bbf520f996578a3"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+
+    function uploadimage(filename) {
+        var ch = false;
+        var storage = firebase.storage();
+        var file = document.getElementById("document").files[0];
+        var storageRef = storage.ref();
+        var fileex = file.name.split('.').pop();
+        fileex = fileex.toLowerCase();
+        var filesize = file.size;
+
+        if (fileex === "pdf" || fileex === "jpg" || fileex === "jpeg" || fileex === "png") {
+            if (filesize < 5000000) {
+                var uploadTask = storageRef.child("tempuserdoc/" + filename + "." + fileex).put(file);
+                $('#modal-wait').modal('show');
+                uploadTask.on('state_changed', function (snapshot) {
+                    // Observe state change events such as progress, pause, and resume
+                    // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+                    var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                    console.log('Upload is ' + progress + '% done');
+                    switch (snapshot.state) {
+                        case firebase.storage.TaskState.PAUSED: // or 'paused'
+                            console.log('Upload is paused');
+                            break;
+                        case firebase.storage.TaskState.RUNNING: // or 'running'
+                            console.log('Upload is running');
+                            break;
+                    }
+                }, function (error) {
+                    // Handle unsuccessful uploads
+                }, function () {
+                    // Handle successful uploads on complete
+                    // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+                    uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
+                        $('#modal-wait').modal('hide');
+                        console.log('File available at', downloadURL);
+
+                        document.getElementById("fileurl").value = downloadURL;
+                        ch = true;
+                        {#console.log(document.getElementById(viewfilelink));#}
+                        {#document.getElementById(viewfilelink).href = downloadURL;#}
+                        {#document.getElementById(viewfilelink).setAttribute('target', '_blank');#}
+                        {#document.getElementById(viewfilelink).className = "text-info";#}
+
+
+                    });
+                });
+            } else {
+
+                Swal.fire({
+                    icon: "error",
+                    title: 'File Size limit exceeded',
+                    text: 'Upload file less than 5 MB',
+                });
+                return false;
+            }
+
+        } else {
+            Swal.fire({
+                icon: "error",
+                title: 'File Type not Allowed',
+                text: 'Upload only pdf,jpg,jpeg,png file',
+            });
+            return false;
+        }
+
+
+        if (ch) {
+            return ch;
+        } else {
+            return false;
+        }
+    }
+
+</script>
+
+<script>
+
+    $(function () {
+        $("#example1").DataTable(
+            {
+                "aaSorting": [],
+                "ordering": true,
+                columnDefs: [{
+                    orderable: false,
+                    targets: "no-sort"
+                }],
+                "order": [[0, "desc"]]
+            }
+        );
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+        });
+    });
+
+
+</script>
+
+<script>
+
+function disableButton(){
+				if(document.getElementById("btndis").disabled == true)
+                {
+                    document.getElementById("btndis").disabled = false;
+                    document.getElementById("eyeIcon").style.background='#f8f9fa';
+                }
+                else{
+                    document.getElementById("btndis").disabled = true;
+                     document.getElementById("eyeIcon").style.background='red';
+                }
+                
+				
+			}
+</script>
+
+</body>
+</html>
