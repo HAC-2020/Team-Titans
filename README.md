@@ -12,7 +12,7 @@ This is a Blockchain backed solution for managing the patient’s medical record
 
 
 <a href="https://teamtitans.herokuapp.com/">
-    <img src="https://firebasestorage.googleapis.com/v0/b/chalo-a910a.appspot.com/o/other%2Flogocc.png?alt=media&token=d7134a04-033e-4988-a00f-1a3d22e38dc6" alt="Aimeos logo" title="Aimeos" align="right" height="60" />
+    <img src="https://firebasestorage.googleapis.com/v0/b/chalo-a910a.appspot.com/o/other%2Flogocc.png?alt=media&token=d7134a04-033e-4988-a00f-1a3d22e38dc6" alt="Aimeos logo" title="Medicyl" height="150" />
 </a>
 
 ## Getting Started
