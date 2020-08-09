@@ -30,15 +30,19 @@ These instructions will get you a copy of the project up and running on your loc
 * Remix(IDE)
 * Metamask
 
- <img src= "https://firebasestorage.googleapis.com/v0/b/chalo-a910a.appspot.com/o/other%2Farch.PNG?alt=media&token=92cf391d-bc70-4370-bb64-bd515bcbd330" alt="Aimeos logo" title="Medicyl" height="450"  width="950"/>
+ <img src= "https://firebasestorage.googleapis.com/v0/b/chalo-a910a.appspot.com/o/other%2Farch.PNG?alt=media&token=92cf391d-bc70-4370-bb64-bd515bcbd330" alt="Aimeos logo" title="Medicyl" height="450"  width="850"/>
 
-## Business
+## Benefits of Businesses after Covid-19
 
-We learn how to design a full fledged application to autimate verification and authentication of documents.
-We learn Machine learning algorithm to detect forgery in documents and differentiate between real and forged documents.
-We also learnt how to complete the task by doing it limited amount of time.
-
-
+* Since businesses are shifting online it is essential to maintain security of confedential user information. There has been a rise in the number of health record breaches every yrear with number crossing 200 miliion in 2019.
+* Since businesses are shifting online it is essential to maintain security of confedential user information. There has been a rise in the number of health record breaches every yrear with number crossing 200 miliion in 2019.
+* due to the pandemic it is essential to maintain social distancing and goverment document verification becomes very difficult in such situations. Also the patients addimmted in the hosptals require a fast and secure mechanism using which they can claim there insurance without any physical verification and delay in the documentation formalities.
+* We have created a prototype application to automate storage,verification and sharing of electronic Health Record documents all with the security of Blockchain.
+We learn Machine learning algorithm .
+* We have also incorporated an OCR system for clear understanding of the reports to the docter
+* We give the user entire control of his/her documents with the abilities share it with doctors/medical representatives and respective insurance companies. 
+* The user can also control for how many days the person can view his records after which the access would utomatically be revoked, for additional security purpose.
+* Th
 
 
 ## Deployment
