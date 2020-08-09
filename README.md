@@ -42,18 +42,16 @@ We learn Machine learning algorithm .
 * We have also incorporated an OCR system for clear understanding of the reports to the docter
 * We give the user entire control of his/her documents with the abilities share it with doctors/medical representatives and respective insurance companies. 
 * The user can also control for how many days the person can view his records after which the access would utomatically be revoked, for additional security purpose.
-* Th
+* The EHR documents are uploaded in an encrypted format.
 
 
 ## Deployment
-
-Add additional notes about how to deploy this on a live system
-
+https://teamtitans.herokuapp.com/
 
 
 ## Authors
 
-* **Priyam Shah** - (https://github.com/priyamshah112)
+Team Titans
 
 See also the list of [contributors](https://github.com/HAC-2020/Team-Titans/contributors) who participated in this project.
 
